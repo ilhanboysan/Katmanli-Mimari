@@ -1,0 +1,22 @@
+Migration + +
+Asp.Net Core 8.0
+MVC 
+API
+Katmanlı Mimari  + +
+Auto Mapper +
+Identity ++
+SignalR + +
+MSSQL
+HTML-CSS-Bootstrap
+Js
+Dinamik Admin Paneli
+Entity Framework +
+Ajax +
+
+
+
+
+QRCODE
+
+
+

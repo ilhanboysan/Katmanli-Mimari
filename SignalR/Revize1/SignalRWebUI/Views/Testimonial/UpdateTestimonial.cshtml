@@ -1,0 +1,53 @@
+﻿@model UpdateTestimonialDto
+@{
+	ViewData["Title"] = "UpdateTestimonial";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Müşteri Yorum İşlemleri</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<form method="post">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title"> Yeni Müşteri Yorumu Güncelle Sayfası</div>
+						</div>
+						<input type="hidden" asp-for="TestimonialID" />
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Name">Müşteri Adı</label>
+								<input type="text" class="form-control" asp-for="Name" id="Name">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Title">Müşteri Ünvan</label>
+								<input type="text" class="form-control" asp-for="Title" id="Title">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="ImageUrl">Müşteri Resim Dosya Yolu</label>
+								<input type="text" class="form-control" asp-for="ImageUrl" id="ImageUrl">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Comment">Müşteri Yorumu</label>
+								<input type="text" class="form-control" asp-for="Comment" id="Comment">
+							</div>
+						</div>
+						<div class="card-action">
+							<button class="btn btn-primary">Müşteri Yorumu Ekle</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,121 @@
+﻿
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+<script src="https://kit.fontawesome.com/b97d7edfbe.js" crossorigin="anonymous"></script>
+<link href="~/css/site.css" rel="stylesheet" />
+
+<div class="main-header">
+
+	<script type="text/javascript">
+		$(document).ready(() => {
+			var connection = new signalR.HubConnectionBuilder().withUrl
+				("https://localhost:7239/SignalRHub").build();
+			$("#connstatus").text(connection.state);
+			connection.start().then(() => {
+				setInterval(() => {
+					connection.invoke("SendNotification");
+
+
+				}, 1000);
+				$("#connstatus").text(connection.state);
+
+
+
+			}).catch((err) => {
+				console.log(err)
+			});
+
+			connection.on("ReceiveNotificationCountByFalse", (value) => {
+				$("#notificationcount").text(value);
+			});
+
+			connection.on("ReceiveNotificationListByFalse", (value) => {
+				$("#notilist").empty();
+				for (var i = 0; i < value.length; i++) {
+					$("#notilist").append(`
+					<a href="#">
+						<div class="${value[i].type}"><i class="${value[i].icon}"></i></div>
+						<div class="notif-content">
+							<span class="block">${value[i].description}</span>
+							<span class="time">${value[i].date}</span>
+						</div>
+					</a>
+				`);
+				}
+			});
+
+
+		});
+	</script>
+
+	<div class="logo-header">
+		<a href="/Default/Index/" class="logo">
+			Admin Restoran
+		</a>
+		<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+	</div>
+	<nav class="navbar navbar-header navbar-expand-lg">
+		<div class="container-fluid">
+
+			<form class="navbar-left navbar-form nav-search mr-md-3" action="">
+				<div class="input-group">
+					<input type="text" placeholder="Search ..." class="form-control">
+					<div class="input-group-append">
+						<span class="input-group-text">
+							<i class="la la-search search-icon"></i>
+						</span>
+					</div>
+				</div>
+			</form>
+			<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+				<li class="nav-item dropdown hidden-caret">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fa-regular fa-bell fa-shake"></i>
+						<span class="notification" id="notificationcount"></span>
+					</a>
+					<ul class="dropdown-menu notif-box" aria-labelledby="navbarDropdown">
+						<li>
+							<div class="dropdown-title">Yeni Bildirimler Var</div>
+						</li>
+						<li>
+							<div class="notif-center">
+								<div id="notilist"></div>
+							</div>
+						</li>
+						<li>
+							<a class="see-all" href="/Notifications/Index/"> <strong>Tüm Bildirimler</strong> <i class="la la-angle-right"></i> </a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <i class="fa-solid fa-user-tie fa-xl" style="color: #051f4d;"></i><span>Admin</span></span> </a>
+					<ul class="dropdown-menu dropdown-user">
+						<li>
+							<div class="user-box">
+								
+								<div class="u-text">
+									<h4>Admin</h4>
+									<p class="text-muted">ilhanboysan@gmail.com</p>
+								</div>
+							</div>
+						</li>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/Menu/Index/"></i> Menü</a>
+						<a class="dropdown-item" href="/Setting/Index/"></i> Ayarlar</a>
+						<a class="dropdown-item" href="/Booking/Index/"><i class="ti-email"></i> Rezervasyonlar</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/ProgressBars/Index/"><i class="ti-settings"></i> Kasa</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="/Login/LogOut/"><i class="fa fa-power-off"></i> Çıkış Yap</a>
+					</ul>
+					<!-- /.dropdown-user -->
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>

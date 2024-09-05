@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ilhan\\Desktop\\SignalR\\Revize1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{055BECE3-F67F-4904-B99F-7DBD68909E50}|SignalR.EntityLayer\\SignalR.EntityLayer.csproj|c:\\users\\ilhan\\desktop\\signalr\\revize1\\signalr.entitylayer\\signalr.entitylayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{055BECE3-F67F-4904-B99F-7DBD68909E50}|SignalR.EntityLayer\\SignalR.EntityLayer.csproj|solutionrelative:signalr.entitylayer\\signalr.entitylayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E038674-9672-45C9-B252-FD6948BD6038}|SignalRWebUI\\SignalRWebUI.csproj|c:\\users\\ilhan\\desktop\\signalr\\revize1\\signalrwebui\\views\\baskets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E038674-9672-45C9-B252-FD6948BD6038}|SignalRWebUI\\SignalRWebUI.csproj|solutionrelative:signalrwebui\\views\\baskets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E038674-9672-45C9-B252-FD6948BD6038}|SignalRWebUI\\SignalRWebUI.csproj|c:\\users\\ilhan\\desktop\\signalr\\revize1\\signalrwebui\\views\\slider\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E038674-9672-45C9-B252-FD6948BD6038}|SignalRWebUI\\SignalRWebUI.csproj|solutionrelative:signalrwebui\\views\\slider\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E038674-9672-45C9-B252-FD6948BD6038}|SignalRWebUI\\SignalRWebUI.csproj|c:\\users\\ilhan\\desktop\\signalr\\revize1\\signalrwebui\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E038674-9672-45C9-B252-FD6948BD6038}|SignalRWebUI\\SignalRWebUI.csproj|solutionrelative:signalrwebui\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SignalR.EntityLayer",
+              "DocumentMoniker": "C:\\Users\\ilhan\\Desktop\\SignalR\\Revize1\\SignalR.EntityLayer\\SignalR.EntityLayer.csproj",
+              "RelativeDocumentMoniker": "SignalR.EntityLayer\\SignalR.EntityLayer.csproj",
+              "ToolTip": "C:\\Users\\ilhan\\Desktop\\SignalR\\Revize1\\SignalR.EntityLayer\\SignalR.EntityLayer.csproj",
+              "RelativeToolTip": "SignalR.EntityLayer\\SignalR.EntityLayer.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-31T15:49:28.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ilhan\\Desktop\\SignalR\\Revize1\\SignalRWebUI\\Views\\Baskets\\Index.cshtml",
+              "RelativeDocumentMoniker": "SignalRWebUI\\Views\\Baskets\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ilhan\\Desktop\\SignalR\\Revize1\\SignalRWebUI\\Views\\Baskets\\Index.cshtml",
+              "RelativeToolTip": "SignalRWebUI\\Views\\Baskets\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-21T12:07:00.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ilhan\\Desktop\\SignalR\\Revize1\\SignalRWebUI\\Views\\Slider\\Index.cshtml",
+              "RelativeDocumentMoniker": "SignalRWebUI\\Views\\Slider\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ilhan\\Desktop\\SignalR\\Revize1\\SignalRWebUI\\Views\\Slider\\Index.cshtml",
+              "RelativeToolTip": "SignalRWebUI\\Views\\Slider\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-11T04:54:25.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\ilhan\\Desktop\\SignalR\\Revize1\\SignalRWebUI\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "SignalRWebUI\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\ilhan\\Desktop\\SignalR\\Revize1\\SignalRWebUI\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "SignalRWebUI\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T21:50:05.04Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

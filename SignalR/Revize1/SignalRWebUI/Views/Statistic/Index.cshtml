@@ -1,0 +1,406 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+
+
+<div class="content">
+	<div class="container-fluid">
+
+		<script type="text/javascript">
+			$(document).ready(() => {
+				var connection = new signalR.HubConnectionBuilder().withUrl
+					("https://localhost:7239/SignalRHub").build();
+				$("#connstatus").text(connection.state);
+				connection.start().then(() => {
+					setInterval(() => {
+						connection.invoke("SendStatistic");
+
+
+					}, 1000);
+					$("#connstatus").text(connection.state);
+
+
+
+				}).catch((err) => {
+					console.log(err)
+				});
+
+				connection.on("ReceiveCategoryCount", (value) => {
+					$("#categorycount").text(value);
+				});
+				connection.on("ReceiveProductCount", (value2) => {
+					$("#productcount").text(value2);
+				});
+				connection.on("ActiveCategoryCount", (value3) => {
+					$("#activecategorycount").text(value3);
+				});
+				connection.on("PassiveCategoryCount", (value4) => {
+					$("#passivecategorycount").text(value4);
+				});
+				connection.on("ProductCountByCategoryNameHamburger", (value5) => {
+					$("#ProductCountByCategoryNameHamburger").text(value5);
+				});
+				connection.on("ProductCountByCategoryNameDrink", (value6) => {
+					$("#ProductCountByCategoryNameDrink").text(value6);
+				});
+				connection.on("ProductPriceAvg", (value7) => {
+					$("#ProductPriceAvg").text(value7);
+				});
+				connection.on("ProductNamePriceMax", (value8) => {
+					$("#ProductNamePriceMax").text(value8);
+				});
+				connection.on("ProductNamePriceMin", (value9) => {
+					$("#ProductNamePriceMin").text(value9);
+				});
+				connection.on("ProductAvgPriceByHamburger", (value10) => {
+					$("#ProductAvgPriceByHamburger").text(value10);
+				});
+				connection.on("TotalOrderCount", (value11) => {
+					$("#TotalOrderCount").text(value11);
+				});
+				connection.on("ActiveOrderCount", (value12) => {
+					$("#ActiveOrderCount").text(value12);
+				});
+				connection.on("LastOrderPrice", (value13) => {
+					$("#LastOrderPrice").text(value13);
+				});
+				connection.on("TotalMoneyCaseAmount", (value14) => {
+					$("#TotalMoneyCaseAmount").text(value14);
+				});
+				connection.on("TotalOrderCount", (value11) => {
+					$("#TotalOrderCount").text(value11);
+				});
+				connection.on("MenuTableCount", (value16) => {
+					$("#MenuTableCount").text(value16);
+				});
+
+			});
+		</script>
+
+
+<h4 class="page-title">Anlık İstatistik Sayfası</h4>
+<div class="row">
+	<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #272727;">
+			<div class="card-body ">
+				<div class="row">
+					<div class="col-5">
+						<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#E78B05"></i>
+						</div>
+					</div>
+					<div class="col-7 d-flex align-items-center">
+						<div class="numbers">
+							<p class="card-category" style="color:#ffffff">Kategori Sayısı</p>
+									<h4 style="color:#ffffff" class="card-title" id="categorycount"></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+			<div class="card card-stats" style="border-radius: 16px; background-color: #525252;">
+			<div class="card-body ">
+				<div class="row">
+					<div class="col-5">
+						<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#00D8C0"></i>
+						</div>
+					</div>
+					<div class="col-7 d-flex align-items-center">
+						<div class="numbers">
+						<p class="card-category" style="color:#ffffff">Ürün Sayısı</p>
+						<h4 class="card-title" style="color:#ffffff" id="productcount"></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #272727;">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-5">
+						<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#E78B05"></i>
+						</div>
+					</div>
+					<div class="col-7 d-flex align-items-center">
+						<div class="numbers">
+						<p class="card-category" style="color:#ffffff">Aktif Kategori Sayısı</p>
+						<h4 class="card-title" style="color:#ffffff" id="activecategorycount"></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #525252;">
+			<div class="card-body ">
+				<div class="row">
+					<div class="col-5">
+						<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#00D8C0"></i>
+						</div>
+					</div>
+					<div class="col-7 d-flex align-items-center">
+						<div class="numbers">
+						<p class="card-category" style="color:#ffffff">Pasif Kategori Sayısı</p>
+						<h4 class="card-title" style="color:#ffffff" id="passivecategorycount"></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #272727;">
+					<div class="card-body ">
+						<div class="row">
+							<div class="col-5">
+								<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#E78B05"></i>
+								</div>
+							</div>
+							<div class="col-7 d-flex align-items-center">
+								<div class="numbers">
+									<p class="card-category" style="color:#ffffff">Hamburger Sayısı</p>
+									<h4 class="card-title" style="color:#ffffff" id="ProductCountByCategoryNameHamburger"></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #525252;">
+					<div class="card-body ">
+						<div class="row">
+							<div class="col-5">
+								<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#00D8C0"></i>
+								</div>
+							</div>
+							<div class="col-7 d-flex align-items-center">
+								<div class="numbers">
+									<p class="card-category" style="color:#ffffff">İçecek Sayısı</p>
+									<h4 class="card-title" style="color:#ffffff" id="ProductCountByCategoryNameDrink"></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #272727;">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-5">
+								<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#E78B05"></i>
+								</div>
+							</div>
+							<div class="col-7 d-flex align-items-center">
+								<div class="numbers">
+									<p class="card-category" style="color:#ffffff">Ortalama Fiyat</p>
+									<h4 class="card-title" style="color:#ffffff" id="ProductPriceAvg"></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #525252;">
+					<div class="card-body ">
+						<div class="row">
+							<div class="col-5">
+								<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#00D8C0"></i>
+								</div>
+							</div>
+							<div class="col-7 d-flex align-items-center">
+								<div class="numbers">
+									<p class="card-category" style="color:#ffffff">En Pahalı Ürün</p>
+									<h4 class="card-title" style="color:#ffffff" id="ProductNamePriceMax"></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #272727;">
+					<div class="card-body ">
+						<div class="row">
+							<div class="col-5">
+								<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#E78B05"></i>
+								</div>
+							</div>
+							<div class="col-7 d-flex align-items-center">
+								<div class="numbers">
+									<p class="card-category" style="color:#ffffff">En Ucuz Ürün</p>
+									<h4 class="card-title" style="color:#ffffff" id="ProductNamePriceMin"></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #525252;">
+					<div class="card-body ">
+						<div class="row">
+							<div class="col-5">
+								<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#00D8C0"></i>
+								</div>
+							</div>
+							<div class="col-7 d-flex align-items-center">
+								<div class="numbers">
+									<p class="card-category" style="color:#ffffff">Ort Hamburger Fiyatı</p>
+									<h4 class="card-title" style="color:#ffffff" id="ProductAvgPriceByHamburger"></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #272727;">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-5">
+								<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#E78B05"></i>
+								</div>
+							</div>
+							<div class="col-7 d-flex align-items-center">
+								<div class="numbers">
+									<p class="card-category" style="color:#ffffff">Toplam Sipraiş</p>
+									<h4 class="card-title" style="color:#ffffff" id="TotalOrderCount"></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #525252;">
+					<div class="card-body ">
+						<div class="row">
+							<div class="col-5">
+								<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#00D8C0"></i>
+								</div>
+							</div>
+							<div class="col-7 d-flex align-items-center">
+								<div class="numbers">
+									<p class="card-category" style="color:#ffffff">Aktif Sipraiş</p>
+									<h4 class="card-title" style="color:#ffffff" id="ActiveOrderCount"></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #272727;">
+					<div class="card-body ">
+						<div class="row">
+							<div class="col-5">
+								<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#E78B05"></i>
+								</div>
+							</div>
+							<div class="col-7 d-flex align-items-center">
+								<div class="numbers">
+									<p class="card-category" style="color:#ffffff">Son Sipariş Tutarı</p>
+									<h4 class="card-title" style="color:#ffffff" id="LastOrderPrice"></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #525252;">
+					<div class="card-body ">
+						<div class="row">
+							<div class="col-5">
+								<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#00D8C0"></i>
+								</div>
+							</div>
+							<div class="col-7 d-flex align-items-center">
+								<div class="numbers">
+									<p class="card-category" style="color:#ffffff">Toplam Ciro</p>
+									<h4 class="card-title" style="color:#ffffff" id="TotalMoneyCaseAmount"></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #272727;">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-5">
+								<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#E78B05"></i>
+								</div>
+							</div>
+							<div class="col-7 d-flex align-items-center">
+								<div class="numbers">
+									<p class="card-category" style="color:#ffffff">Bugünkü Kazanç</p>
+									<h4 class="card-title" style="color:#ffffff">125.95₺</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card card-stats" style="border-radius: 16px; background-color: #525252;">
+					<div class="card-body ">
+						<div class="row">
+							<div class="col-5">
+								<div class="icon-big text-center">
+									<i class="fa-solid fa-bolt" style="color:#00D8C0"></i>
+								</div>
+							</div>
+							<div class="col-7 d-flex align-items-center">
+								<div class="numbers">
+									<p class="card-category" style="color:#ffffff">Masa Sayısı</p>
+									<h4 class="card-title" style="color:#ffffff" id="MenuTableCount"></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+</div>
+</div>
+
+

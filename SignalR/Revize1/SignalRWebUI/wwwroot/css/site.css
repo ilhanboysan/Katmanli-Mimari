@@ -1,0 +1,157 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/* style.css */
+.my-bounce:hover .fa-house {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-burger {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-layer-group {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-egg {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-bell {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-address-card {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-tags {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-phone {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-circle-up {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-mug-hot {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-instagram {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-chart-line {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-desktop {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-location-pin {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-comments {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-check {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-bars-progress {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-gears {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-envelopes-bulk {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-qrcode {
+    animation: bounce 1s;
+}
+.my-bounce:hover .fa-right-to-bracket {
+    animation: bounce 1s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.my-sidebar {
+    background-color: #ccc; /* Gri arkaplan rengi */
+}
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateX(5px) rotate(5deg);
+    }
+
+    75% {
+        transform: translateX(-5px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.fa-shake {
+    animation: shake 2s infinite;
+}
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateX(5px) rotate(5deg);
+    }
+
+    75% {
+        transform: translateX(-5px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.fa-shake {
+    animation: shake 2s infinite;
+}
+
+
