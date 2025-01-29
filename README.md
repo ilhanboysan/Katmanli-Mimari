@@ -58,4 +58,6 @@
 ![cookie](https://github.com/user-attachments/assets/bd0104b7-acc2-4f0f-bc75-268a42e5fa8c)
 
 
-
+# 📬 İletişim
+- 📧 E-posta: ilhanboysan@gmail.com
+- 📌 LinkedIn: [linkedin.com/in/username](https://www.linkedin.com/in/ilhan-boysan/)
