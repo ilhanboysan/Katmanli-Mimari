@@ -11,7 +11,6 @@
 - Yönetici panelinden restoran istatistiklerini ve rezervasyon durumlarını anlık olarak takip edebilmek.
 
 
-# 🛠️ Kullanılan Teknolojiler
 ## 🛠️ Kullanılan Teknolojiler  
 
 ### **Backend**  
