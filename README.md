@@ -1,4 +1,4 @@
-# 🍔🍕 SignalR Restoran Yönetim & Rezervasyon Projesi 🍕🍔
+# 🍔🍕 SignalR Restoran Yönetim & Rezervasyon Projesi 
 
 # 📌 Proje Hakkında
 - Bu proje, modern bir restoran yönetim ve rezervasyon sistemi geliştirmek amacıyla oluşturulmuştur. Kullanıcılar, web arayüzü üzerinden restoran hakkında bilgi alabilir, masa rezervasyonu yapabilir, yöneticilere mesaj gönderebilir ve anlık bildirimler alabilir.
