@@ -1,49 +1,55 @@
-# 🍔🍕 SignalR Restoran Yönetim & Rezervasyon Projesi 
+# 🍔🍕 SignalR Restaurant Management & Reservation System
 
-# 📌 Proje Hakkında
-- Bu proje, modern bir restoran yönetim ve rezervasyon sistemi geliştirmek amacıyla oluşturulmuştur. Kullanıcılar, web arayüzü üzerinden restoran hakkında bilgi alabilir, masa rezervasyonu yapabilir, yöneticilere mesaj gönderebilir ve anlık bildirimler alabilir.
-- SignalR teknolojisi sayesinde, yöneticiler rezervasyon taleplerini gerçek zamanlı olarak takip edebilir, müşteri mesajlarını anlık olarak görüntüleyebilir ve masa durumlarını canlı olarak izleyebilir.
+## 📌 About the Project
+This project was developed to create a modern, real-time restaurant management and reservation system. Through the web interface, users can view restaurant information, make table reservations, send messages to administrators, and receive instant notifications.
 
-# 🎯 Projenin Amacı
-- Restoran yönetimini dijitalleştirerek işletmelere kolaylık sağlamak.
-- Müşterilere hızlı ve kullanıcı dostu bir rezervasyon deneyimi sunmak.
-- SignalR ile anlık bildirim, mesajlaşma ve sipariş takibini sağlamak.
-- Yönetici panelinden restoran istatistiklerini ve rezervasyon durumlarını anlık olarak takip edebilmek.
+Thanks to **SignalR** technology, administrators can track reservation requests in real time, view customer messages instantly, and monitor table statuses live.
 
+## 🎯 Project Goals
 
-## 🛠️ Kullanılan Teknolojiler  
+- Digitize restaurant operations to improve efficiency for businesses  
+- Provide customers with a fast and user-friendly reservation experience  
+- Enable real-time messaging, notifications, and order tracking using SignalR  
+- Allow administrators to monitor restaurant statistics and reservation statuses live via the admin panel  
 
-### **Backend**  
+---
+
+## 🛠️ Technologies Used
+
+### **Backend**
 - ASP.NET Core 8.0  
-- MVC  
-- API  
-- Katmanlı Mimari  
-- CQRS & Mediator  
+- MVC Architecture  
+- Web API  
+- Layered Architecture  
+- CQRS & Mediator Pattern  
 - Repository Design Pattern  
 - AutoMapper  
-- Identity  
+- ASP.NET Identity  
 - SignalR  
-- MSSQL  
+- Microsoft SQL Server  
 - Entity Framework Core  
 - LINQ  
 - MailKit  
-- Migration  
-- QRCode İşlemleri  
+- Migrations  
+- QR Code Processing  
 
-### **Frontend**  
+### **Frontend**
 - HTML / CSS / Bootstrap  
 - JavaScript / AJAX  
-- Dinamik Admin Paneli  
+- Dynamic Admin Panel  
 
-# 🚀 Öne Çıkan Özellikler
-- ✅ Onion Architecture ile Katmanlı Mimari
-- ✅ Dinamik Yönetim Paneli (Admin tarafından kontrol edilebilir kullanıcı sayfaları)
-- ✅ Kimlik Doğrulama & Yetkilendirme (Identity)
-- ✅ Gerçek Zamanlı Kullanıcı Mesajlaşma (SignalR ile)
-- ✅ Anlık Sipariş & Rezervasyon Bildirimleri
-- ✅ Dinamik Restoran İstatistik Sayfası
-- ✅ AJAX ile Sepet ve Sipariş Yönetimi
-- ✅ Mail Gönderme & Kullanıcı İletişim Sayfası
+---
+
+## 🚀 Key Features
+
+- ✅ Layered Architecture with Onion Design Pattern  
+- ✅ Dynamic Admin Panel (Admin-controlled user interfaces)  
+- ✅ Authentication & Authorization using ASP.NET Identity  
+- ✅ Real-Time User Messaging via SignalR  
+- ✅ Live Order & Reservation Notifications  
+- ✅ Dynamic Restaurant Statistics Dashboard  
+- ✅ Cart and Order Management with AJAX  
+- ✅ Email Sending & User Contact Page  
 
 ![visualstudio](https://github.com/user-attachments/assets/9be8ce32-aef2-40bb-8ba2-1d50c69ebe06)
 
@@ -58,6 +64,7 @@
 ![cookie](https://github.com/user-attachments/assets/bd0104b7-acc2-4f0f-bc75-268a42e5fa8c)
 
 
-# 📬 İletişim
-- 📧 E-posta: ilhanboysan@gmail.com
-- 📌 LinkedIn: [linkedin.com/in/username](https://www.linkedin.com/in/ilhan-boysan/)
+# 📬 Contact
+- 📧 E-mail: ilhanboysan@gmail.com
+- 📌 LinkedIn: [linkedin.com/in/ilhanboysan](https://www.linkedin.com/in/ilhan-boysan/)
+
